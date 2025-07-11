@@ -203,7 +203,7 @@ def get_products_info_for_row(row_idx, df_presupuesto, product_lookup):
 
     return df
 # --- UI ---
-st.title("📦 Presupuesto Stock")
+st.title("📦 Pedido Info")
 doc_input = st.text_input("Ingrese el DocNumber:")
 
 if doc_input:
@@ -222,7 +222,7 @@ if doc_input:
                 if df_result.empty:
                     st.warning("No valid products found in the selected presupuesto. They may lack SKUs or attribute data.")
                 else:
-                    st.success(f"Presupuesto '{original_docnum}' details loaded!")
+                    st.success(f"Pedido '{original_docnum}' details loaded!")
                     # Convert numeric columns safely
                     for col in ["Net Weight (kg)", "Total Weight (kg)", "Volume (m³)", "Units", "Stock Disponible", "Falta"]:
                         df_result[col] = pd.to_numeric(df_result[col], errors='coerce')
