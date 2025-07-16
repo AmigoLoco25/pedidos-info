@@ -221,7 +221,7 @@ if doc_input:
                 original_docnum = presupuesto_df.loc[row_idx, 'docNumber']
                 df_result = get_products_info_for_row(row_idx, presupuesto_df, lookup)
                 if df_result.empty:
-                    st.warning("No valid products found in the selected presupuesto. They may lack SKUs or attribute data.")
+                    st.warning("No valid products found in the selected Pedido. They may lack SKUs or attribute data.")
                 else:
                     st.success(f"Pedido '{original_docnum}' details loaded!")
                     # Convert numeric columns safely
