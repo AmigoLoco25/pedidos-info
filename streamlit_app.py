@@ -5,6 +5,8 @@ import numpy as np
 import io
 
 # --- AUTH ---
+st.subheader("this app is outdated. go to https://wio-documento-stock-peso.streamlit.app/")
+
 password = st.text_input("🔐Ingrese la contraseña", type="password")
 if password != st.secrets["app_password"]:
     st.stop()
